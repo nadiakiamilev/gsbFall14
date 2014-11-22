@@ -1,0 +1,16 @@
+#OS X
+.DS_STORE
+mongod.lock
+groceryDelivery.0
+groceryDelivery.ns
+local.0
+local.ns
+thumbs.db
+Icon?
+._*
+
+# npm
+node_modules/
+*.log
+*.gz
+
