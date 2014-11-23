@@ -113,9 +113,9 @@
 	</div>
 
 	<div id="signup">
-		<br><br><br><br><br>
+		<br><br><br><br>
 		<div class="row" style="padding-top:auto; padding-bottom:auto;">			
-			<a href="/users/signup" class="button" id="button">I'M A <strong>BUSINESS</strong></a>
+			<a href="/users/signup" class="button" id="button">I'M A <strong>BUSINESS</strong></a> 
 			<a href="/users/signupConsumer" class="button" id="button">I'M A <strong>CONSUMER</strong></a>
 		</div>
 	</div>

@@ -56,20 +56,20 @@
 
 	<div id="submitinfo" class="large-4-columns">
 
-		<form name="input" action="/users/adduser" method="post"> 
+		<form name="input" action="/users/addConsumer" method="post"> 
 		  <div class="row">
 		    <div class="small-6 medium-6 large-6 columns">
 		      
 		      <label>Name
-		        <input type="text" name="name" placeholder="Name" />
+		        <input type="text" name="name" placeholder="John Doe" />
 		      </label>
 
 		      <label>Address
-		        <input type="text" name="address" placeholder="Address" />
+		        <input type="text" name="address" placeholder="123 Main Street" />
 		      </label>
 
 		      <label>E-Mail
-		          <input type="text" name="email" placeholder="E-mail" />
+		          <input type="text" name="email" placeholder="johndoe@gmail.com" />
 		      </label><br>
 
 		      <a href="/"><img src="../images/back_btn.png" style="width:125px; margin-right:20px;"></a> <input type="image" src="../images/submit_btn.png" style="width:125px; vertical-align:middle;" value="submit"></input>

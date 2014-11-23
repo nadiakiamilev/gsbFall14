@@ -11,4 +11,5 @@ var getFAQ = router.get('/faq', function(req, res) {
 	console.log('responding with faq page');
 	res.send('here is our faq page');
 })
+
 module.exports = router;

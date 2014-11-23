@@ -17,14 +17,17 @@ router.get('/signupConsumer', function(req, res) {
   // res.send('respond with a resource');
 });
 
+
 var Schema = mongoose.Schema
 
 //requires all fields
 var userSchema = new Schema({
-    businessName : { type: String, required: true},
     name : { type: String, required: true },
+    businessName : { type: String },
+    address : { type: String, required: true },
+    phoneNumber : { type: String },
     email : { type: String, required: true },
-    address : { type: String, required: true }
+    userType : { type: String, required: true}
 })
 
 var User = mongoose.model('users', userSchema)
@@ -56,6 +59,96 @@ var getUsers = router.get('/userlist', function(req, res) {
 	console.log('why yes, yes it does.')
 })
 
+var getUsers2 = router.get('/allusers', function(req, res) {
+	var db= req.db
+	console.log(db + "running")
+
+	User.find();
+})
+
+var addBusiness = router.post('/addBusiness', function(req, res) {
+	var db = req.db
+
+	var name = req.body.name
+	var businessName = req.body.businessName
+	var address = req.body.address
+	var phoneNumber = req.body.phoneNumber
+	var email = req.body.email
+	var userType = "business"
+
+	User.count({email: email}, function(err, count) {
+		if (!count) {
+			var tmpBus = new User({
+				"name" : name,
+				"businessName" : businessName,
+				"address" : address,
+				"phoneNumber" : phoneNumber,
+				"email" : email,
+				"userType" : userType
+			}).save(function (err, tmpBus) {
+				if (err) {
+					console.error(err)
+					// res.json(err)
+					res.render('error', {err: err})
+				}
+				else {
+					res.render('submit', {name: name});
+				}
+			});
+		}
+		else {
+			//alert user that this e-mail has already been used
+			console.log('Looks like you have already signed up with this e-mail!')
+			res.send('Looks like you have already signed up. Thanks for the added interest!')
+		}
+	})
+
+
+})
+
+var getSubmit = router.get('/submit', function(req, res) {
+	res.render('submit')
+})
+
+var getError = router.get('/error', function(req, res) {
+	res.render('error')
+})
+
+var addConsumer = router.post('/addConsumer', function(req, res) {
+	var db = req.db
+
+	var name = req.body.name
+	var address = req.body.address
+	var email = req.body.email
+	var userType = "consumer"
+
+	User.count({email: email}, function(err, count) {
+		if (!count) {
+			var tmpUser = new User({
+				"name" : name,
+				"address" : address,
+				"email" : email,
+				"userType" : userType
+			}).save(function (err, tmpUser) {
+				if (err) {
+					console.error(err)
+					// res.json(err)
+					res.render('error', {err: err})
+				}
+				else {
+					res.render('submit', {name: name});
+				}
+			});
+		}
+		else {
+			//alert user that this e-mail has already been used
+			console.log('Looks like you have already signed up with this e-mail!')
+			res.send('Looks like you have already signed up. Thanks for the added interest!')
+		}
+	})
+
+
+})
 
 /*POST a user to our DB*/
 var addUser = router.post('/adduser', function(req, res) {
@@ -65,18 +158,20 @@ var addUser = router.post('/adduser', function(req, res) {
 	//gets all the input from the form
 	var name = req.body.name
 	var businessName = req.body.businessName
-	var email = req.body.email
 	var address = req.body.address
+	var phonNumber = req.body.phonNumber
+	var email = req.body.email
+	
 
 	//first need to check if this data already exists based on e-mail
 	User.count({email: email}, function(err, count) {
 		if (!count) {
-			console.log('HEY WE R GOING TO PUT IN THIS INFORMATION')
 			var tmpUser = new User({
 				"name" : name,
 				"businessName" : businessName,
+				"address" : address,
+				"phoneNumber" : phoneNumber,
 				"email" : email,
-				"address" : address
 			}).save(function (err, tmpUser) {
 				if (err) return console.error(err)
 				else {
