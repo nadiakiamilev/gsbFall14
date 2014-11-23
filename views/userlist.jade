@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	h1= "USER LIST"
+	ul 
+		each user, i in userlist
+			li= user.name 
+			li= user.email
+			li= user.address

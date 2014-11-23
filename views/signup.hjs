@@ -1,0 +1,83 @@
+<head>
+	
+	<link rel="stylesheet" type="text/css" href="../stylesheets/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/foundation.min.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/signup.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/font-awesome-4.2.0/css/font-awesome.min.css">
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:900,300' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+	<div class="row">
+		<div class="large-10 columns">
+			<h1>I'm a Business.</h1>
+			<p>Thanks for your interest! We're really excited about this program and we're glad that you are too. You can sign up below for some more information coming soon.</p>
+		</div>
+	</div>
+<!-- 	<div class="row">
+		<div class="center">
+			
+
+			<div class="large-2 columns">
+				<form name="input" action="/users/adduser" method="post">
+					<input type="text" name="name" value="Name"></input>
+					<input type="text" name="businessName" value="Business Name"></input>
+					<input type="email" name="email" value="E-mail"></input>
+					<input type="text" name="address" value="Local Address"></input>
+					
+				</form>
+
+
+				<a class="button" href="/">back</a>
+			</div>
+
+
+		
+			
+		
+		</div>
+	</div>
+ -->
+	<form name="input" action="/users/adduser" method="post">
+	  <div class="row">
+	    <div class="large-12 columns">
+	      <label>Name
+	        <input type="text" name="name" placeholder="Name" style="width:50%;" />
+	      </label>
+	    </div>
+	  </div>
+	  <div class="row">
+	    <div class="large-4 columns">
+	      <label>Business Name
+	        <input type="text" name="businessName" placeholder="Business Name" style="width:50%;"/>
+	      </label>
+	    </div>
+	    <div class="large-4 columns">
+	      <label>Address
+	        <input type="text" name="address" placeholder="Address" style="width:50%;"/>
+	      </label>
+	    </div>
+	    <div class="large-4 columns">
+	      <label>Contact Number
+	        <input type="text" name="phoneNumber" placeholder="Phone #" style="width:50%;"/>
+	      </label>
+	    </div>
+	    <div class="large-4 columns">
+	      <div class="row collapse">
+	        <label>E-Mail</label>
+	          <input type="text" name="email" placeholder="E-mail" style="width:50%;"/>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="row">
+	  	<div class="large-4 columns">
+	  		<a href="/"><img src="../images/back_btn.png"></a> <input type="submit" class="button" value="submit"></input>
+	  	</div>
+	  </div>
+	</form>
+
+</body>

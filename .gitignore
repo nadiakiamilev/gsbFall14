@@ -1,8 +1,10 @@
 #OS X
 .DS_STORE
 mongod.lock
-groceryDelivery.0
-groceryDelivery.ns
+mattressmovers.0
+mattressmovers.ns
+journal
+_tmp
 local.0
 local.ns
 thumbs.db

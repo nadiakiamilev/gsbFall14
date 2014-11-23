@@ -1,0 +1,78 @@
+<DOCTYPE! html>
+<head>
+	<title>{{title}}</title>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/foundation.min.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/index.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/font-awesome-4.2.0/css/font-awesome.min.css">
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:900,600,300,' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+	
+	
+  <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
+    <!-- section wrap -->
+    <section class="top-bar-section">
+    	<ul class="left">
+    		<!-- <li><a href="">hey</a></li> -->
+    	</ul>
+    	<!-- right hand side nav -->
+    	<ul class="left" id="navbarText"> 
+    		<li style="color:#999 !important;"><a href="">HOME</a></li>
+    		<li style="color:#999; !important;"><a href="">INFO</a></li>
+    		<li><a href="">REGISTER FOR OUR BETA</a></li>
+    	</ul>
+    </section>
+  </nav>
+
+
+
+	<div class="center" id="home">
+		<h1></h1>
+		<img src="../images/MM_TITLE.png">
+		<h5>GET RID OF YOUR MATTRESS <span style="color:#90C85F;">RESPONSIBLY.</span></h5>
+		<br><br>
+		<a href="/users/signup"><img src="../images/MM_Register_btn.png" style="width:500px; height:100px;"></a>
+		<br>
+		
+		<img src="../images/Learn_More_btn.png" style="width:148px; height:49px; margin-top:10%;">
+
+	</div>
+
+	<div id="information">
+		<div class="row">
+		  <div class="small-4 large-4 columns">
+		  	<img src="../images/Recycle_Matt.png"><br><br>
+		  	<h3>WHAT WE DO</h3>
+			<p>Mattress Movers is a mattress dismantling & recycling company. We pick up mattresses at your convenience and make sure that they are disposed of responsibly.</p>
+		  </div>
+		  <div class="small-4 large-4 columns">
+		  	<img src="../images/Recycle_Matt.png"><br><br>
+		  	<h3>WHY WE DO IT</h3>
+			<p>We're dedicated to being green. We accomplish this through a focus on diverting matresses from landfills.</p>
+		  </div>
+		  <div class="small-4 large-4 columns">
+		  	<img src="../images/Recycle_Matt.png"><br><br>
+		  	<h3>WHO WE SERVICE</h3>
+			<p></p>
+		  </div>
+		</div>
+		
+		<div>			
+			<a href="/users/signup" class="button" id="button">I'm A Business</a>
+			<a href="/users/signup" class="button" id="button">I'm A Consumer</a>
+		</div>
+
+	</div>
+
+	<div id="signup">
+
+	</div>
+</body>
+
+<html>

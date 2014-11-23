@@ -1,0 +1,47 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/foundation.min.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</head>
+<body>
+
+
+
+<script type="text/javascript">
+
+	// construct template string
+	
+	 
+	// compile template
+	// var hello = hogan.compile(template);
+
+
+	$.ajax({
+		type: "GET",
+		dataType: "json",
+		url: '/users/userlist',
+		// data: "{'name':'" + name + "' , 'businessName': '" + businessName + "', 'email': '" + email + "', 'address': '" + address + "' }",
+		// success: function(response) {
+		// 	data = response;
+		// 	console.log(data);
+		// }
+	}).done(function (data) {
+		var items = [];
+		console.log('hi')
+		console.log(data + "hey");
+	});
+
+	// $.getJSON( "/users/userlist", function( data ) {
+	//   var items = [];
+	//   $.each( data, function( key, val ) {
+	//     items.push( "<li id='" + key + "'>" + val + "</li>" );
+	//   });
+	 
+	//   $( "<ul/>", {
+	//     "class": "my-new-list",
+	//     html: items.join( "" )
+	//   }).appendTo( "body" );
+	// });
+</script>
+</body>
