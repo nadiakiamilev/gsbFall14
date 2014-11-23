@@ -13,17 +13,15 @@
 </head>
 
 <body>
-<div id="error">
-	<h1>{{message}}</h1>
-	<h2>{{error.status}}</h2>
-
-</div>
 
 	<div id="description">
 		<div class="row">
 			<div class="large-10 columns">
 				<img src="../images/MM_TITLE_UpperLeft.png" style="width:350px;"><br><br>
-				<h5>THIS IS WRONG</h5>
+				<div id="errow">
+					<h1>{{message}}</h1>
+					<h3>Oops! Wrong page.</h3>
+				</div>
 				<br>
 				<a href="/"><img src="../images/back_btn.png" style="width:125px; margin-right:20px;"></a> 
 				

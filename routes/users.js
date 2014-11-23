@@ -59,13 +59,6 @@ var getUsers = router.get('/userlist', function(req, res) {
 	console.log('why yes, yes it does.')
 })
 
-var getUsers2 = router.get('/allusers', function(req, res) {
-	var db= req.db
-	console.log(db + "running")
-
-	User.find();
-})
-
 var addBusiness = router.post('/addBusiness', function(req, res) {
 	var db = req.db
 

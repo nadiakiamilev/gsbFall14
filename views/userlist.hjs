@@ -2,6 +2,7 @@
 	<title>{{title}}</title>
 	<link rel="stylesheet" type="text/css" href="../stylesheets/normalize.css">
 	<link rel="stylesheet" type="text/css" href="../stylesheets/foundation.min.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/userlist.css">
 	<link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
 	<link rel="stylesheet" type="text/css" href="../stylesheets/font-awesome-4.2.0/css/font-awesome.min.css">
 	
@@ -15,39 +16,12 @@
 <body>
 
 	<div>
-		<h3>Admin</h3>
-		<span>{{userlist}}</span>
+		<h3>Users Who Signed Up</h3>
+		<ul>
+			{{#userlist}}
+				<li>{{name}}, {{businessName}}, {{address}}, {{phoneNumber}}, {{email}}</li>
+			{{/userlist}}
+		</ul>
 	</div>
-
-<script type="text/javascript">
-
-
-	$.ajax({
-		type: "GET",
-		dataType: "json",
-		url: '/users/userlist',
-		// data: "{'name':'" + name + "' , 'businessName': '" + businessName + "', 'email': '" + email + "', 'address': '" + address + "' }",
-		// success: function(response) {
-		// 	data = response;
-		// 	console.log(data);
-		// }
-	}).done(function (data) {
-		var items = [];
-		console.log('hi')
-		console.log(data + "hey");
-	});
-
-	// $.getJSON( "/users/userlist", function( data ) {
-	//   var items = [];
-	//   $.each( data, function( key, val ) {
-	//     items.push( "<li id='" + key + "'>" + val + "</li>" );
-	//   });
-	 
-	//   $( "<ul/>", {
-	//     "class": "my-new-list",
-	//     html: items.join( "" )
-	//   }).appendTo( "body" );
-	// });
-</script>
 
 </body>

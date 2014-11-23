@@ -19,7 +19,7 @@
 		<div class="row">
 			<div class="large-10 columns">
 				<img src="../images/MM_TITLE_UpperLeft.png" style="width:350px;"><br><br>
-				<h5>Thank You for submitting your information!</h5>
+				<h5>Thank You for submitting your information {{name}} !</h5>
 				<br>
 				<a href="/"><img src="../images/back_btn.png" style="width:125px; margin-right:20px;"></a> 
 				
