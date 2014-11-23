@@ -1,5 +1,5 @@
 body {
-  padding: 50px;
+  
   /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
   font-family: 'Raleway', sans-serif;
 }
@@ -8,8 +8,17 @@ a {
   color: #00B7FF;
 }
 
+#submitinfo {
+	padding: 50px;	
+}
+
 .button {
 	background-color: #90C85F;	
 	font-family: 'Raleway', sans-serif;
 	
+}
+
+p {
+	font-size: 15px;
+	line-height: 21px;
 }

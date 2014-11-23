@@ -8,12 +8,22 @@
 	<link rel="stylesheet" type="text/css" href="../stylesheets/font-awesome-4.2.0/css/font-awesome.min.css">
 	
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script type="text/javascript" src="../javascripts/jquery.localScroll.min.js"></script>
+	<script type="text/javascript" src="../javascripts/jquery.scrollTo.min.js"></script>
+
 	<link href='http://fonts.googleapis.com/css?family=Raleway:900,600,300,' rel='stylesheet' type='text/css'>
 
 </head>
 
 <body>
-	
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>	
 	
   <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
     <!-- section wrap -->
@@ -23,9 +33,9 @@
     	</ul>
     	<!-- right hand side nav -->
     	<ul class="left" id="navbarText"> 
-    		<li style="color:#999 !important;"><a href="">HOME</a></li>
-    		<li style="color:#999; !important;"><a href="">INFO</a></li>
-    		<li><a href="">REGISTER FOR OUR BETA</a></li>
+    		<li style="color:#999 !important;"><a href="#home">HOME</a></li>
+    		<li style="color:#999; !important;"><a href="#information">INFO</a></li>
+    		<li id="registerlink"><a href="#signup">REGISTER FOR OUR BETA</a></li>
     	</ul>
     </section>
   </nav>
@@ -37,42 +47,72 @@
 		<img src="../images/MM_TITLE.png">
 		<h5>GET RID OF YOUR MATTRESS <span style="color:#90C85F;">RESPONSIBLY.</span></h5>
 		<br><br>
-		<a href="/users/signup"><img src="../images/MM_Register_btn.png" style="width:500px; height:100px;"></a>
+		<a href="#signup"><img src="../images/MM_Register_btn.png" style="width:500px; height:100px;"></a>
 		<br>
 		
-		<img src="../images/Learn_More_btn.png" style="width:148px; height:49px; margin-top:10%;">
+		<a href="#information"><img src="../images/Learn_More_btn.png" style="width:148px; height:49px; margin-top:10%;"></a>
 
 	</div>
 
 	<div id="information">
 		<div class="row">
 		  <div class="small-4 large-4 columns">
-		  	<img src="../images/Recycle_Matt.png"><br><br>
+		  	<img src="../images/Recycle_Matt.png" style="height:175px;"><br><br>
 		  	<h3>WHAT WE DO</h3>
 			<p>Mattress Movers is a mattress dismantling & recycling company. We pick up mattresses at your convenience and make sure that they are disposed of responsibly.</p>
 		  </div>
 		  <div class="small-4 large-4 columns">
-		  	<img src="../images/Recycle_Matt.png"><br><br>
+		  	<img src="../images/MM_Why.png" style="height:175px;"><br><br>
 		  	<h3>WHY WE DO IT</h3>
 			<p>We're dedicated to being green. We accomplish this through a focus on diverting matresses from landfills.</p>
 		  </div>
 		  <div class="small-4 large-4 columns">
-		  	<img src="../images/Recycle_Matt.png"><br><br>
+		  	<img src="../images/MM_Who.png" style="height:175px;"><br><br>
 		  	<h3>WHO WE SERVICE</h3>
 			<p></p>
 		  </div>
 		</div>
 		
-		<div>			
-			<a href="/users/signup" class="button" id="button">I'm A Business</a>
-			<a href="/users/signup" class="button" id="button">I'm A Consumer</a>
-		</div>
+		
 
+	</div>
+
+	<div id="infographic">
+		<span>info goes here.</span>
 	</div>
 
 	<div id="signup">
-
+		<div class="row">			
+			<a href="/users/signup" class="button" id="button">I'm A Business</a>
+			<a href="/users/signupConsumer" class="button" id="button">I'm A Consumer</a>
+		</div>
 	</div>
+
+	
+	<footer>
+		<span><i class="fa fa-copyright"></i>DGMD&R,LLC</span>
+
+		<span class="right" ><div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div></span>
+	</footer>
+
+	<script type="text/javascript">
+	//local scroll
+	$(document).ready(function () {
+
+		$.localScroll({
+			// target: '#content', // could be a selector or a jQuery object too.
+			axis: 'y',
+			duration:1000,
+			hash:true,
+			onBefore:function( e, anchor, $target ){
+				// The 'this' is the settings object, can be modified
+			},
+			onAfter:function( anchor, settings ){
+				// The 'this' contains the scrolled element (#content)
+			}
+		});
+	});
+	</script>
 </body>
 
 <html>

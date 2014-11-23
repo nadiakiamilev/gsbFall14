@@ -51,30 +51,41 @@ a {
 /** Changes the hover state of non active menu items **/
 .top-bar-section li:hover a {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%) repeat scroll 0 0 transparent;
-    color: #999;
+    /*color: #999;*/
+    color: #90C85F;
 }
  
 /** Changes non active menu items text color to black **/
 .top-bar-section ul li > a {
-    color: #90C85F;
+    
+    color: #999;
+    font-family: 'Raleway', sans-serif;
+}
+
+.top-bar-section ul li#registerlink > a {
+	color: #90C85F;
 }
 
 .top-bar-section ul li:hover:not(.has-form)>a {
 	background-color: #555;
 	background: #272727;
-	color: #999;
+	/*color: #999;*/
+	color: #90C85F;
 	border-bottom: #999;
 }
- 
+
+/**ANIMATE CSS*/ 
+.top-bar-section ul li#registerlink:hover:not(.has-form)>a {
+	background-color: #555;
+	background: #272727;
+	color: #999;
+	/*color: #90C85F;*/
+	border-bottom: #999;
+}
+
 /** Changes the hover state of dropdown menu items **/
 .top-bar-section ul.dropdown li a:hover:not(.button) {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0.9);
-}
- 
-/** IMPORTANT fill for the ul dropdown container **/
-.top-bar-section ul.dropdown {
-    background: #333;
-    color: #fff;
 }
  
 /** This fixes the position and the color of the dropdown arrow **/
@@ -128,7 +139,8 @@ a {
 #information {
 	/*min-height: 750px;*/
 	/*max-height: 750px;*/
-	margin-top: 10%;
+	margin-top: 5%;
+	margin-bottom: 5%;
 	vertical-align: middle;
 	/*max-width: 300px;*/
 }
@@ -147,10 +159,24 @@ a {
 	font-weight: 600;
 }
 
+/*Infographic section*/
+#infographic {
+	background-color: #ecf0f1;
+	min-height: 50%;
+}
+
+#signup {
+	min-height: 50%;
+	vertical-align: middle;
+}
+
 #button {
 	background-color: #90C85F;	
 	font-family: 'Raleway', sans-serif;
-	margin-top: 100px;
-	margin: 30px;
-	margin-bottom: 100px;
+	margin-top: 15%;
+	/*margin-bottom: 100px;*/
+	margin-right: 8%;
+	margin-left: 8%;
+	transition: #90C85F 300ms ease-out;
 }
+

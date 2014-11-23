@@ -11,6 +11,12 @@ router.get('/signup', function(req, res) {
   // res.send('respond with a resource');
 });
 
+router.get('/signupConsumer', function(req, res) {
+	console.log('new sign up  consumer form')
+  	res.render('signupConsumer' , {title: 'Consumer'})
+  // res.send('respond with a resource');
+});
+
 var Schema = mongoose.Schema
 
 //requires all fields
@@ -55,11 +61,6 @@ var getUsers = router.get('/userlist', function(req, res) {
 var addUser = router.post('/adduser', function(req, res) {
 	
 	var db = req.db
-	console.log(db + " running. We're about to add new user to our db")
-	
-	console.log(req);
-
-	console.log(req.body);
 
 	//gets all the input from the form
 	var name = req.body.name
@@ -69,7 +70,6 @@ var addUser = router.post('/adduser', function(req, res) {
 
 	//first need to check if this data already exists based on e-mail
 	User.count({email: email}, function(err, count) {
-		// console.log(name + " " + year + " " + email + " " + address)
 		if (!count) {
 			console.log('HEY WE R GOING TO PUT IN THIS INFORMATION')
 			var tmpUser = new User({
@@ -80,9 +80,7 @@ var addUser = router.post('/adduser', function(req, res) {
 			}).save(function (err, tmpUser) {
 				if (err) return console.error(err)
 				else {
-					//changes the header of the address so we go to userlist
 					// res.location('submit')
-					//redirect the page once information is submitted to userlist
 					// res.render('submit', {name: name});
 					res.send('hey nice job sumbitting info');
 				}
