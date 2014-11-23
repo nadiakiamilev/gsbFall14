@@ -21,45 +21,76 @@
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>	
 
+	<head>
 	
-	<div id="submitinfo">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/foundation.min.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/signup.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/font-awesome-4.2.0/css/font-awesome.min.css">
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:900,300' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>	
+	
+	<div id="description">
 		<div class="row">
 			<div class="large-10 columns">
-				<img src="../images/MM_TITLE_UpperLeft.png" style="width:400px;"><br><br>
+				<img src="../images/MM_TITLE_UpperLeft.png" style="width:350px;"><br><br>
 				<h5>Looking To Get Rid Of Your Old Mattress?</h5>
 				<p>Thanks for your interest! You came to the right place. We're really excited about this program and we're glad that you are too. We come straight to your doorstep to get that mattress off of your hands.  You can sign up below for some more information coming soon.</p>
 			</div>
 		</div>
+	</div>
 
-		<form name="input" action="/users/adduser" method="post">
+	<div id="submitinfo" class="large-4-columns">
+
+		<form name="input" action="/users/adduser" method="post"> 
 		  <div class="row">
-		    <div class="large-12 columns">
+		    <div class="small-6 medium-6 large-6 columns">
+		      
 		      <label>Name
-		        <input type="text" name="name" placeholder="Name" style="width:50%;" />
+		        <input type="text" name="name" placeholder="Name" />
 		      </label>
-		    </div>
-		  </div>
-		  <div class="row">
 
-		    <div class="large-4 columns">
 		      <label>Address
-		        <input type="text" name="address" placeholder="Address" style="width:50%;"/>
+		        <input type="text" name="address" placeholder="Address" />
 		      </label>
+
+		      <label>E-Mail
+		          <input type="text" name="email" placeholder="E-mail" />
+		      </label><br>
+
+		      <a href="/"><img src="../images/back_btn.png" style="width:125px; margin-right:20px;"></a> <input type="image" src="../images/submit_btn.png" style="width:125px; vertical-align:middle;" value="submit"></input>
+
 		    </div>
 
-		    <div class="large-4 columns">
-		      <div class="row collapse">
-		        <label>E-Mail</label>
-		          <input type="text" name="email" placeholder="E-mail" style="width:50%;"/>
-		      </div>
-		    </div>
+		    <div class="small-6 medium-6 large-6 columns">
+		      <span style=""><img src="../images/Recycle_Matt.png" style="margin-left:18%"></span>
+		  	</div>
+
 		  </div>
+
+		  <!-- 
 		  <div class="row">
 		  	<div class="large-4 columns">
 		  		<a href="/"><img src="../images/back_btn.png" style="width:125px; margin-right:20px;"></a> <input type="image" src="../images/submit_btn.png" style="width:125px; vertical-align:middle;" value="submit"></input>
 		  	</div>
-		  </div>
+		  </div> -->
+
 		</form>
+
 	</div>
 
 	<footer style="position:fixed;">

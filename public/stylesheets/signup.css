@@ -8,8 +8,14 @@ a {
   color: #00B7FF;
 }
 
+#description {
+	padding: 50px;
+	padding-bottom: 0px;
+}
+
 #submitinfo {
 	padding: 50px;	
+	padding-top: 10px;
 }
 
 .button {
