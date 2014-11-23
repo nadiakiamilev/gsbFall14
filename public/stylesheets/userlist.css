@@ -1,0 +1,31 @@
+body {
+  
+  /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+  font-family: 'Raleway', sans-serif;
+  padding: 50px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#description {
+	padding: 50px;
+	padding-bottom: 0px;
+}
+
+#submitinfo {
+	padding: 50px;	
+	padding-top: 10px;
+}
+
+.button {
+	background-color: #90C85F;	
+	font-family: 'Raleway', sans-serif;
+	
+}
+
+p {
+	font-size: 15px;
+	line-height: 21px;
+}
