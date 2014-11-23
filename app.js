@@ -9,7 +9,8 @@ var MongoClient = require('mongodb').MongoClient;
 var mongoose = require('mongoose');
 
 /*DB Code*/
-mongoose.connect('localhost:27017/mattressmovers')
+var dbconnection = process.env.MONGODBPROD || 'localhost:27017/mattressmovers'
+mongoose.connect(dbconnection)
 var db = mongoose.connection
 db.on('error', console.error.bind(console, 'connection error'))
 db.once('open', function callback() {
